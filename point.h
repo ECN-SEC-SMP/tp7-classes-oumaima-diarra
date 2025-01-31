@@ -10,7 +10,7 @@ private:
 public:
 
     //methode
-    void tranlater(float a, float b);
+    void translater(float a, float b);
     //constructeurs
     Point();
     Point(float A, float B);
@@ -22,6 +22,9 @@ public:
     //mutateurs
     void mut_abscisse(float x);
     void mut_ordonnee(float y);
+    //operateur
+    void operator+=(Point const& c);
+   // ostream& operator<<(ostream& s, float const& c);
 };
 
 #endif

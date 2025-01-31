@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void Point::tranlater(float a, float b)
+void Point::translater(float a, float b)
 {
     this->x += a;
     this->y += b;
@@ -46,4 +46,17 @@ void Point::mut_abscisse(float x)
  void Point::mut_ordonnee(float y)
 {
     this->y=y;
+}
+// surcharge de l'operateur <<
+ostream& operator<<(ostream&s, Point const& c)
+{   c.get_abscisse();
+
+ return s;
+}
+
+//surcharge de l'operateur += 
+void Point::operator+=(Point const& c)
+{   
+    this->x += c.get_abscisse();
+    this->y += c.get_ordonnee();
 }
